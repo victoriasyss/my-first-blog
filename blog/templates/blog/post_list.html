@@ -5,5 +5,12 @@
 <body bgcolor=”#D8CEF6”><h1><center>Bienvenidos a mi blog</center></h1><font size=”3″ face=”Comic Sans MS, Arial, MS Sans Serif”>
  <center>Donde encontraras <b>posts</b> interesantes</font><h2><center><center><u>Mis posts</u><center>
 </h2><font size=”3″ face=”Comic Sans MS, Arial, MS Sans Serif”>
+{% for post in posts %}
+<div>
+<p>published: {{ post.published_date }}</p>
+<h1><a href="">{{ post.title }}</a></h1>
+<p>{{ post.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
 </body>
 </html>
